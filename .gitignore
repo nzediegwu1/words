@@ -1,7 +1,6 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿/.vs/config/applicationhost.config
+/.vs/words/v14/.suo
+/.vs/config/applicationhost.config
+/node_modules
 
 /words.sln
-/node_modules
-/.vs
