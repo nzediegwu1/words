@@ -1,5 +1,13 @@
 ﻿exports.words = sentence => {
-    if (typeof sentence === 'string') {
+    if (Number(sentence)) {
+        return { error: 'parameter must not be number' };
+    } else if (Array.isArray(sentence)) {
+        return { error: 'parameter must not be an array' };
+    } else if (sentence === undefined) {
+        return { error: 'parameter is undefined' };
+    } else if (typeof sentence === 'object') {
+        return { error: 'parameter must not be an object' };
+    } else {
         const inputArray = sentence.toLowerCase().split(' ');
         const outputObject = {};
         for (let i = 0; i < inputArray.length; i++) {
@@ -13,5 +21,4 @@
         }
         return outputObject;
     }
-    return { error: 'parameter must be a string' };
 };
